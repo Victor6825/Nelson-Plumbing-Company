@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NELSON PLUMBING - The Future of Fluid Dynamics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'sans-serif'],
+                        'sans': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        'cyber-black': '#0a0a0a',
+                        'neon-blue': '#00f0ff',
+                        'neon-green': '#39ff14',
+                        'cyber-gray': '#1a1a1a',
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 10px #00f0ff, 0 0 20px #00f0ff80',
+                        'neon-green': '0 0 10px #39ff14, 0 0 20px #39ff1480',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-lime-400;
+            }
+            .glow-text {
+                text-shadow: 0 0 8px rgba(0, 240, 255, 0.7);
+            }
+            .glow-text-green {
+                text-shadow: 0 0 8px rgba(57, 255, 20, 0.7);
+            }
+            .nav-link {
+                @apply px-4 py-2 rounded-lg transition-all duration-300 hover:bg-gray-800 hover:text-cyan-400 hover:shadow-neon-blue;
+            }
+            .btn-primary {
+                @apply bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-bold tracking-wider 
+                       hover:shadow-neon-blue hover:scale-105 transition-all duration-300 border border-cyan-400/30;
+            }
+            .card {
+                @apply bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-400/30 
+                       transition-all duration-300 hover:shadow-neon-blue hover:scale-[1.02];
+            }
+            .page-section {
+                @apply min-h-screen py-20 px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-64;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-cyan-400 font-orbitron tracking-widest mb-4 md:mb-0">NELSON</a>
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+                    <a href="#home" class="nav-link text-sm md:text-base">HOME</a>
+                    <a href="#about" class="nav-link text-sm md:text-base">ABOUT</a>
+                    <a href="#services" class="nav-link text-sm md:text-base">SERVICES</a>
+                    <a href="#portfolio" class="nav-link text-sm md:text-base">PORTFOLIO</a>
+                    <a href="#booking" class="nav-link text-sm md:text-base">BOOKING</a>
+                    <a href="#contact" class="nav-link text-sm md:text-base">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <!-- Home Section -->
+        <section id="home" class="page-section flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 font-orbitron text-gradient glow-text">
+                    NELSON: THE FUTURE OF FLUID DYNAMICS
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Precision Engineering. Zero Waste. Autonomous Systems.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div class="card">
+                        <div class="text-4xl mb-4 text-cyan-400">⚡</div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">HYPER-EFFICIENCY</h3>
+                        <p class="text-gray-300">Our AI-driven systems optimize water flow with 99.9% efficiency, reducing waste and costs.</p>
+                    </div>
+                    <div class="card">
+                        <div class="text-4xl mb-4 text-lime-400">🔍</div>
+                        <h3 class="text-xl font-bold mb-2 text-lime-400">24/7 QUANTUM DIAGNOSTICS</h3>
+                        <p class="text-gray-300">Real-time monitoring and predictive maintenance before issues arise.</p>
+                    </div>
+                    <div class="card">
+                        <div class="text-4xl mb-4 text-cyan-400">♻️</div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">SUSTAINABLE FLOW</h3>
+                        <p class="text-gray-300">Eco-conscious solutions that protect our most precious resource.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page-section bg-gray-800/30">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center font-orbitron text-gradient">ORIGIN PROTOCOL</h2>
+                <div class="space-y-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold mb-4 text-cyan-400">OUR BEGINNINGS</h3>
+                        <p class="text-gray-300 mb-6">
+                            Founded in 2077 during the Great Water Crisis, Nelson Plumbing emerged from the ashes of outdated infrastructure and failing legacy systems. 
+                            Our founder, A. N. Droid, envisioned a future where water management was seamless, efficient, and intelligent.
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="text-2xl font-bold mb-4 text-lime-400">VISION</h3>
+                        <p class="text-gray-300 mb-6">
+                            We're pioneering the next generation of fluid dynamics with our proprietary Quantum Flow™ technology. 
+                            Our AI systems predict and prevent issues before they occur, ensuring uninterrupted service and optimal performance.
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="text-2xl font-bold mb-4 text-cyan-400">THE TEAM</h3>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-3xl">A.N.</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-lime-400">A. N. DROID</h4>
+                                <p class="text-cyan-300">Chief Hydro-Engineer & Founder</p>
+                                <p class="text-sm text-gray-400">Quantum Mechanics Specialist | Fluid Dynamics Expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="page-section bg-gray-900">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center font-orbitron text-gradient">ADVANCED FLOW SOLUTIONS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-cyan-900/50 flex items-center justify-center text-2xl text-cyan-400 mr-4">🤖</div>
+                            <h3 class="text-2xl font-bold text-cyan-400">HYDRO-AI DIAGNOSTICS</h3>
+                        </div>
+                        <p class="text-gray-300">Our AI systems continuously monitor your water infrastructure, detecting anomalies with quantum precision before they become problems. Real-time alerts and automated reports keep you informed.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-lime-900/50 flex items-center justify-center text-2xl text-lime-400 mr-4">🔮</div>
+                            <h3 class="text-2xl font-bold text-lime-400">QUANTUM LEAK SEALING</h3>
+                        </div>
+                        <p class="text-gray-300">Utilizing nanotechnology and quantum tunneling, we can seal leaks at the molecular level without disrupting service. Our sealants adapt to pipe materials and expand/contract with temperature changes.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-cyan-900/50 flex items-center justify-center text-2xl text-cyan-400 mr-4">🌱</div>
+                            <h3 class="text-2xl font-bold text-cyan-400">BIO-FILTER INSTALLATION</h3>
+                        </div>
+                        <p class="text-gray-300">Our proprietary bio-filtration systems use genetically engineered microorganisms to purify water naturally, removing 99.99% of contaminants while being completely sustainable.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-lime-900/50 flex items-center justify-center text-2xl text-lime-400 mr-4">🌀</div>
+                            <h3 class="text-2xl font-bold text-lime-400">PNEUMATIC PIPE RE-LINING</h3>
+                        </div>
+                        <p class="text-gray-300">Our non-invasive pipe rehabilitation uses high-pressure air and self-expanding polymers to create seamless, durable linings inside existing pipes, extending their lifespan by decades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="page-section bg-gray-800/30">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center font-orbitron text-gradient">COMPLETED MISSION LOGS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card group">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                            <div class="w-full h-48 bg-gradient-to-br from-cyan-900/50 to-gray-800 flex items-center justify-center text-5xl">🔧</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400 group-hover:text-lime-400 transition-colors">PROJECT TITAN</h3>
+                        <p class="text-gray-300">Complete overhaul of the Titan Towers water system, implementing our Quantum Flow™ technology across 120 floors.</p>
+                    </div>
+                    
+                    <div class="card group">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                            <div class="w-full h-48 bg-gradient-to-br from-lime-900/50 to-gray-800 flex items-center justify-center text-5xl">🏢</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lime-400 group-hover:text-cyan-400 transition-colors">THE NEXUS TOWER</h3>
+                        <p class="text-gray-300">Installed a fully automated, self-regulating water reclamation system that reduced water waste by 87%.</p>
+                    </div>
+                    
+                    <div class="card group">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                            <div class="w-full h-48 bg-gradient-to-br from-cyan-900/50 to-gray-800 flex items-center justify-center text-5xl">🌉</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400 group-hover:text-lime-400 transition-colors">AQUA BRIDGE</h3>
+                        <p class="text-gray-300">Emergency repair of the city's main aqueduct using our rapid-deployment nano-sealant technology.</p>
+                    </div>
+                    
+                    <div class="card group">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                            <div class="w-full h-48 bg-gradient-to-br from-lime-900/50 to-gray-800 flex items-center justify-center text-5xl">🏭</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lime-400 group-hover:text-cyan-400 transition-colors">INDUSTRIAL ZONE 7</h3>
+                        <p class="text-gray-300">Complete decontamination and modernization of an abandoned industrial district's water infrastructure.</p>
+                    </div>
+                    
+                    <div class="card group">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                            <div class="w-full h-48 bg-gradient-to-br from-cyan-900/50 to-gray-800 flex items-center justify-center text-5xl">🏥</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400 group-hover:text-lime-400 transition-colors">ST. MERCY HOSPITAL</h3>
+                        <p class="text-gray-300">Installation of a medical-grade water purification system with 99.9999% pathogen removal.</p>
+                    </div>
+                    
+                    <div class="card group">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                            <div class="w-full h-48 bg-gradient-to-br from-lime-900/50 to-gray-800 flex items-center justify-center text-5xl">🌍</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lime-400 group-hover:text-cyan-400 transition-colors">GLOBAL INITIATIVE</h3>
+                        <p class="text-gray-300">Partnering with 12 countries to implement our sustainable water management solutions in drought-affected regions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="page-section bg-gray-900">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center font-orbitron text-gradient">ENGAGE A FLUID SPECIALIST</h2>
+                <div class="card">
+                    <form id="bookingForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-cyan-400 mb-1">FULL NAME</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-500"
+                                   placeholder="Enter your full name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-cyan-400 mb-1">NEURAL ID (EMAIL)</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-500"
+                                   placeholder="your.neural@id.com">
+                        </div>
+                        
+                        <div>
+                            <label for="issue" class="block text-sm font-medium text-cyan-400 mb-1">SYSTEM MALFUNCTION TYPE</label>
+                            <select id="issue" name="issue" required 
+                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white">
+                                <option value="" disabled selected>Select an issue</option>
+                                <option value="leak">Quantum Leak Detected</option>
+                                <option value="blockage">Flow Restriction</option>
+                                <option value="diagnostics">System Diagnostics</option>
+                                <option value="upgrade">Infrastructure Upgrade</option>
+                                <option value="other">Other Anomaly</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-cyan-400 mb-1">DESCRIBE ANOMALY</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-500"
+                                      placeholder="Please provide details about the issue you're experiencing..."></textarea>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <button type="submit" class="btn-primary w-full py-4 text-lg font-orbitron tracking-wider">
+                                INITIATE SERVICE REQUEST
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section bg-gray-800/30">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center font-orbitron text-gradient">DIRECT COMMUNICATION CHANNEL</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold mb-6 text-cyan-400">CONTACT INFO</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider">ENCRYPTED LINE</h4>
+                                    <p class="mt-1 text-lg font-mono text-lime-400">+1-555-FLOW-2077</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider">NEURAL MESSAGE</h4>
+                                    <p class="mt-1 text-lg font-mono text-lime-400">contact@nelson.flow</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider">SECTOR 7 HQ</h4>
+                                    <p class="mt-1 text-gray-300">2077 Innovation Drive</p>
+                                    <p class="text-gray-300">Neo Metroplex, NM 90210</p>
+                                    <p class="text-gray-400 text-sm mt-2">*By appointment only</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider">OPERATIONAL HOURS</h4>
+                                    <p class="mt-1 text-gray-300">24/7/365 Emergency Response</p>
+                                    <p class="text-gray-300">Standard Consultations: 06:00 - 22:00 UTC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="text-2xl font-bold mb-6 text-lime-400">SEND A MESSAGE</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="contactName" class="block text-sm font-medium text-gray-400 mb-1">YOUR NAME</label>
+                                <input type="text" id="contactName" name="name" required 
+                                       class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent text-white placeholder-gray-500">
+                            </div>
+                            
+                            <div>
+                                <label for="contactEmail" class="block text-sm font-medium text-gray-400 mb-1">NEURAL ID (EMAIL)</label>
+                                <input type="email" id="contactEmail" name="email" required 
+                                       class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent text-white placeholder-gray-500">
+                            </div>
+                            
+                            <div>
+                                <label for="contactSubject" class="block text-sm font-medium text-gray-400 mb-1">SUBJECT</label>
+                                <input type="text" id="contactSubject" name="subject" required 
+                                       class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent text-white placeholder-gray-500">
+                            </div>
+                            
+                            <div>
+                                <label for="contactMessage" class="block text-sm font-medium text-gray-400 mb-1">MESSAGE</label>
+                                <textarea id="contactMessage" name="message" rows="4" required
+                                          class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent text-white placeholder-gray-500"></textarea>
+                            </div>
+                            
+                            <div class="pt-2">
+                                <button type="submit" class="w-full bg-gradient-to-r from-lime-500 to-green-600 text-white px-6 py-3 rounded-lg font-bold hover:shadow-neon-green hover:scale-105 transition-all duration-300 border border-lime-400/30">
+                                    TRANSMIT MESSAGE
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-cyan-400 font-orbitron">NELSON</span>
+                    <span class="text-xs text-gray-500">© 2077</span>
+                </div>
+                
+                <div class="flex space-x-6
+                ">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+                <p>Nelson Plumbing is a fictional company created for demonstration purposes. Any resemblance to actual companies or services is purely coincidental.</p>
+                <p class="mt-2">© 2077 Nelson Plumbing. All rights reserved. | <a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for fixed header
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without page reload
+                    history.pushState(null, '', targetId);
+                }
+            });
+        });
+        
+        // Form submission handling
+        document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Service request submitted! Our team will contact you shortly.');
+            this.reset();
+        });
+        
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message transmitted! We\'ll get back to you soon.');
+            this.reset();
+        });
+        
+        // Add active class to nav links on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = '#' + section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-cyan-400', 'font-bold', 'border-b-2', 'border-cyan-400');
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('text-cyan-400', 'font-bold', 'border-b-2', 'border-cyan-400');
+                }
+            });
+        });
+        
+        // Initialize - highlight first nav link
+        navLinks[0].classList.add('text-cyan-400', 'font-bold', 'border-b-2', 'border-cyan-400');
+    </script>
+</body>
+</html>
